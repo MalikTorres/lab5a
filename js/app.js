@@ -14,6 +14,7 @@ function sum(a, b) { //eslint-disable-line
   let myStr = `The sum of ${a} and ${b} is ${mySum}.`
 
   return [mySum,myStr];
+  // returns an array
 
 }
 
@@ -37,6 +38,7 @@ function multiply(a, b) { //eslint-disable-line
   let str = `The product of ${a} and ${b} is ${product}.`;
 
   return [product, str];
+  // returns an array
 
 }
 
@@ -60,11 +62,13 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
    
   let firstSum = sum(a,b);
+  // invoked sum function with parameters a and b and stored it in firstSum variable
   let totalSum = sum(firstSum[0],c);
-
+  // invoked sum fuction again and passed in firstsum at position 0 which is the sum and parameter c
   let firstMultiply = multiply(a,b);
+  // invoked multiply function with parameters a and b and stored it in firstMultiply variable
   let totalProduct = multiply(firstMultiply[0],c);
-
+  //invoked multiply function and passed in firstMultiply variable at index 0 and parameter c
   let stringOne = `${a} and ${b} and ${c} sum to ${totalSum[0]}.`;
 
   let newProduct = `The product of ${a} and ${b} and ${c} is ${totalProduct[0]}.`;
