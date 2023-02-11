@@ -60,11 +60,14 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
    
   let firstSum = sum(a,b);
+  // invoke sum function with parameters a and b and store in firstSum
   let totalSum = sum(firstSum[0],c);
+  // invoke sum function again, passing in firstsum array at 0 and c
 
   let firstMultiply = multiply(a,b);
+  // invoke multiply function with parameters a and b and store in firstMultiply
   let totalProduct = multiply(firstMultiply[0],c);
-
+  // invoke multiply function again passing in array at index 0 and c
   let stringOne = `${a} and ${b} and ${c} sum to ${totalSum[0]}.`;
 
   let newProduct = `The product of ${a} and ${b} and ${c} is ${totalProduct[0]}.`;
@@ -92,12 +95,23 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  let subSum = sum(testArray[0],testArray[1]);
+  // saving evaluated result/ output of sum to a variable named subSum 
+  let grandSum = sum(subSum[0],testArray[2]);
+  // Passing in the saved output into sum with last element of test array
+  let string = `2,3,4 was passed in as an array of numbers, and 9 is their sum.`
+  
+    console.log(`${grandSum} equals grand sum`);
+    return [grandSum[0],string];
 
+
+// let string = `${sumArr} was passed in as an array of numbers, and 9 is their sum`;
+ 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
