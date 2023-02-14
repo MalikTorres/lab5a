@@ -59,15 +59,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
    
-  let firstSum = sum(a,b);
   // invoke sum function with parameters a and b and store in firstSum
-  let totalSum = sum(firstSum[0],c);
+  let firstSum = sum(a,b);
   // invoke sum function again, passing in firstsum array at 0 and c
+  let totalSum = sum(firstSum[0],c);
 
-  let firstMultiply = multiply(a,b);
   // invoke multiply function with parameters a and b and store in firstMultiply
-  let totalProduct = multiply(firstMultiply[0],c);
+  let firstMultiply = multiply(a,b);
   // invoke multiply function again passing in array at index 0 and c
+  let totalProduct = multiply(firstMultiply[0],c);
   let stringOne = `${a} and ${b} and ${c} sum to ${totalSum[0]}.`;
 
   let newProduct = `The product of ${a} and ${b} and ${c} is ${totalProduct[0]}.`;
@@ -95,14 +95,14 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let subSum = sum(testArray[0],testArray[1]);
   // saving evaluated result/ output of sum to a variable named subSum 
-  let grandSum = sum(subSum[0],testArray[2]);
+   //let subSum = sum(sumArr[0],sumArr[1]);
   // Passing in the saved output into sum with last element of test array
-  let string = `2,3,4 was passed in as an array of numbers, and 9 is their sum.`
+  //let grandSum = sum(subSum[0],sumArr[2]);
+  //let string = `2,3,4 was passed in as an array of numbers, and 9 is their sum.`
   
-    console.log(`${grandSum} equals grand sum`);
-    return [grandSum[0],string];
+    //console.log(`${grandSum} equals grand sum`);
+    //return [grandSum[0],string];
 
 
 // let string = `${sumArr} was passed in as an array of numbers, and 9 is their sum`;
@@ -111,7 +111,7 @@ function sumArray(sumArr) { //eslint-disable-line
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray);
+// testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -156,15 +156,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
-
+//for(let = 0; i < array.length; i++) {
+//sum(1, array[i])
+// }
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  // console.log(dynamicAns);
+  // console.log(dynamicArray[i]);
+  dynamicArray = 1;
+  for(let i = 0; i < dynamicArray.length; i++) {
+    dynamic = multiply(dynamicAns, dynamicArray[i])[0];
+  }
+let
 }
-
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+//testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
